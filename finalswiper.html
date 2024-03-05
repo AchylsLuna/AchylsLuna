@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiper</title>
+    <!--humanap ako magandang fonts, etc mwehehe-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
+
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #6c3903;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .swiper {
+            max-width: 50%;
+            overflow: visible;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 300px;
+            height: 300px;
+            position: relative;
+            filter: blur(100);
+            -webkit-box-reflect: below 195px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, #7e5806), to(rgb(126, 80, 11)));
+
+        }
+
+        .swiper-slide::after {
+            position: absolute;
+            content: "";
+            inset: 0;
+            width: 100%;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            background: linear-gradient(to bottom right, #b8b8b88f, #ffffff5e);
+        }
+
+        .swiper-slide-active::after {
+            background: none;
+        }
+
+        .swiper-slide>div {
+            text-align: center;
+            display: none;
+            opacity: 0;
+        }
+
+        .swiper-slide-active div {
+            display: block;
+            opacity: 1;
+        }
+
+        .swiper-slide h2 {
+            font-size: 1.2rem;
+            font-family: "Libre Baskerville", serif;
+            position: relative;
+        }
+
+        .swiper-slide h2::after {
+            position: absolute;
+            content: "";
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 2px;
+            background: linear-gradient(#ff9c22, #f5bc11);
+        }
+
+        @keyframes line {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+
+        .swiper-slide-active h2::after {
+            animation: line 0.5s linear forwards;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+            box-shadow: 0px 3px 17px rgb(0 0 0 / 25%);
+            border-radius: 50%;
+            aspect-ratio: 1/1;
+        }
+
+        .swiper-slide h2 {
+            color: #fff;
+        }
+
+        @media (min-width: 768px) {
+            .swiper-slide h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="sun00.webp"
+                    alt="MASTERMIND" />
+                <div>
+                    <h2>Heart's silent whispers,
+                        Lost in the winds of farewell,
+                        Time's balm soothes the ache.</h2>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="sun0.webp" alt="Pizza" />
+                <div>
+                    <h2>In parted shadows,
+                        Memories linger and weep,
+                        Love's echo fades soft.</h2>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="sun1.jpg"
+                    alt="sun1" />
+                <div>
+                    <h2>Sunset's golden glow,
+                        Melting into twilight's kiss,
+                        Day surrenders night.</h2>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="sun2.jpg"
+                    alt="sun2" />
+                <div>
+                    <h2>Silhouettes dance free,
+                        Against the canvas of dusk,
+                        Nature's masterpiece.</h2>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="sun3.jpg" alt="sun3" />
+                <div>
+                    <h2>Crimson streaks the sky,
+                        As the sun bids day goodbye,
+                        Stars prepare to shine.</h2>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="sun4.jpg" alt="sun4" />
+                <div>
+                    <h2>Whispers in the breeze,
+                        Echoes of the fading light,
+                        Peaceful evening's hush.
+                    </h2>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="sun5.jpg" alt="sun5" />
+                <div>
+                    <h2>Horizon ablaze,
+                        Daylight's final embrace,
+                        Welcomes dusk's embrace.</h2>
+                </div>
+                <div class="swiper-slide">
+                    <img src="sun6.jpg" alt="sun6" />
+                    <div>
+                        <h2>Fiery sky ablaze,
+                            Reflecting on tranquil seas,
+                            Day meets night's embrace.</h2>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="sun7.jpg" alt="sun7" />
+                        <div>
+                            <h2>Mountains wear the dusk,
+                                Like a cloak of fading light,
+                                Evening's quietude.</h2>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="sun8.jpg" alt="sun8" />
+                            <div>
+                                <h2>Sun's fiery descent,
+                                    Silent symphony of hues,
+                                    Nightfall's gentle touch</h2>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="sun9.jpg" alt="sun9" />
+                                <div>
+                                    <h2>Shadows lengthen slow,
+                                        As sun dips below the line,
+                                        Twilight softly grows.</h2>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="sun10.jpg" alt="sun10" />
+                                    <div>
+                                        <h2>Sky a canvas vast,
+                                            Painted with the hues of dusk,
+                                            Sunset's final act.</h2>
+                                    </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            loop: true,
+            slidesPerView: "1",
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 4,
+                slideShadows: false
+            },
+            keyboard: {
+                enabled: true
+            },
+            mousewheel: {
+                thresholdDelta: 70
+            },
+            initialSlide: 0,
+            on: {
+                click(event) {
+                    swiper.slideTo(this.clickedIndex);
+                }
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
